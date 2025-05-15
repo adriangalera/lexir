@@ -10,6 +10,7 @@ tasks:
     cmds:
       - echo "Available tasks:"
       - echo "- download-dictionaries"
+      - echo "- build"
     silent: true
 
   download-dictionaries:
@@ -18,3 +19,7 @@ tasks:
       - mv /tmp/kaikki-spanish.jsonl dictionaries/kaikki-spanish.jsonl
     silent: true
 
+  build:
+    cmds:
+      - go build -o bin/lexir ./cmd/lexir/main.go
+    silent: true
