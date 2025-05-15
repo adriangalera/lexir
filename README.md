@@ -2,6 +2,14 @@
 
 This repo contains some pieces of codes to play around with words and generate thing such as crosswords, [paraulogic](https://www.vilaweb.cat/paraulogic/) style puzzles, etc ..
 
+## Dictionaries
+
+Download the dictionaries by running
+
+```shell
+task download-dictionaries
+```
+
 ## TODO
 
 1. Download some form a dictionary to local files
