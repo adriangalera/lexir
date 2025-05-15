@@ -11,6 +11,7 @@ type Dictionary interface {
 	IsWordInDictionary(word string) bool
 	FindAllWordsMatching(wordQuery string) []string
 	GetMeanings(word string) []Meaning
+	AllWords() []string
 }
 
 func NewHashDictionary() Dictionary {

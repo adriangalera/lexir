@@ -21,7 +21,7 @@ func main() {
 			if errorParsing != nil {
 				log.Fatalf("Could not parse %s", inputFile)
 			} else {
-				fmt.Print("Loaded successfully\n", inputFile)
+				fmt.Printf("Successfully loaded %d words\n", len(dict.AllWords()))
 			}
 		},
 	}
