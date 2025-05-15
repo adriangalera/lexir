@@ -1,4 +1,4 @@
 *.jsonl
-venv
+scripts/venv
 *.bz2
 *.xml
