@@ -1,6 +1,6 @@
 # https://taskfile.dev
 
-version: '3'
+version: "3"
 
 vars:
   GREETING: Hello, World!
@@ -11,6 +11,8 @@ tasks:
       - echo "Available tasks:"
       - echo "- download-dictionaries"
       - echo "- build"
+      - echo "- test"
+      - echo "- clean-tests"
     silent: true
 
   download-dictionaries:
@@ -22,4 +24,16 @@ tasks:
   build:
     cmds:
       - go build -o bin/lexir ./cmd/lexir/main.go
+    silent: true
+
+  test:
+    cmds:
+      - go test ./...
+      - go vet ./...
+      - golangci-lint run
+    silent: true
+
+  clean-tests:
+    cmds:
+      - go clean -testcache
     silent: true
